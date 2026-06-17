@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
 :root{
-    --main-color: crimson
+    --mainColor: crimson;
+    --bgSection: white;
+    --barColor: rgb(207, 127, 127);
 }
 
 *{
@@ -11,11 +15,108 @@
 
 html, body{
     min-height: 100vh;
-    background-color: var(--main-color);
+    background-color: var(--mainColor);
 }
 
 main{
     display: grid;
     grid-template-columns: 30% 1fr;
-    grid-gap: 16px;
+    gap: 24px;
+    margin: 20px;
+    font-family: "Google Sans", sans-serif;
+}
+
+
+
+
+.left, .experience, .education{
+    background-color: var(--bgSection);
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.experience, .education{
+    padding: 10px;
+}
+
+.left{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.leftImage{
+    position: relative;
+}
+
+.leftImage img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.leftImage h1{
+    position: absolute;
+    bottom: 0;
+    color: #ff5709e8;
+}
+
+.right{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    list-style: none;
+}
+
+.personal, .skills, .languages{
+    padding: 16px;
+    line-height: 20px;
+}
+
+.progress{
+    display: inline-block;
+    width: 100%;
+    height: 16px;
+    background-color: var(--barColor);
+    transition: 100ms ease;
+    border-radius: 20px;
+}
+
+.bar{
+    border-radius: 20px;
+    height: 100%;
+    width: 80%;
+    background-color: var(--mainColor);
+}
+
+.itenName{
+    font-weight: bolder;
+}
+
+.date, i{
+    color: var(--mainColor);
+}
+
+footer{
+    color: white;
+    background-color: black;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--mainColor);
+    padding: 5px;
+    transition: 100ms ease;
+}
+
+footer a:hover{
+    color: white;
+    
 }
