@@ -20,13 +20,17 @@ html, body{
 
 main{
     display: grid;
-    grid-template-columns: 30% 1fr;
-    gap: 24px;
+    grid-template-columns: 35% 1fr;
+    gap: 16px;
     margin: 20px;
     font-family: "Google Sans", sans-serif;
 }
 
-
+@media(max-width: 880px){
+    main {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 .left, .experience, .education{
@@ -116,7 +120,8 @@ footer a{
     transition: 100ms ease;
 }
 
-footer a:hover{
+footer a:hover, i:hover{
     color: rgb(255, 0, 0);
     
 }
+
